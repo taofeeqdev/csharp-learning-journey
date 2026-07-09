@@ -27,6 +27,13 @@ int b = 7;
 int c = a + b;
 Console.WriteLine(c);
 
+int x = 15;
+long y = x;                        // Implicit conversion from int to long
+short w = (short)x;                // Explicit conversion from int to short
+short z = (short)((short)x + (short)y);
+Console.WriteLine($"Short W is int to short: {w}");
+Console.WriteLine($"Short Z is int x and long y to short: {z}");
+
 int firstNumber = 2100000000;
 int secondNumber = 1900000000;
 long thirdNumber = (long)firstNumber + (long)secondNumber;
@@ -63,3 +70,50 @@ else
 {
     Console.WriteLine("The answer is LESS than 20 or j is NOT equal to k");
 }
+
+
+// Loops
+int counter = 0;
+counter ++;
+Console.WriteLine($"Counter is {counter}");
+counter ++;
+Console.WriteLine($"Counter is {counter}");
+counter ++;
+Console.WriteLine($"Counter is {counter}");
+counter ++;
+Console.WriteLine($"Counter is {counter}");
+
+int count = 0;
+// while loop
+while (count < 5)
+{
+    Console.WriteLine($"Count is {count}");
+    count++;
+}
+
+// do while loop
+do
+{
+    Console.WriteLine($"Count is {count}");
+    count++;
+} while (count < 5);
+
+// for loop
+for (int index = 0; index < 5; index++)
+{
+    if(index == 3)
+    {
+        Console.WriteLine("Index is 3");
+    }
+}
+
+// Reusable code with methods
+Console.WriteLine(FeetToInches(30));
+Console.WriteLine(FeetToInches(100));
+
+int FeetToInches(int feet)
+{
+    return feet * 12;
+}
+
+Console.WriteLine(FeetToInches(22));
